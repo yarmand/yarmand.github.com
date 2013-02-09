@@ -5,13 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>\_@yarmand coding tales_/</title>
+  <title>Javascript initializers to your views with Rails 3.1 and CoffeeScript - \_@yarmand coding tales_/</title>
   <meta name="author" content="yann Armand">
 
   
-  <meta name="description" content="Sometime when you write documentation or HTML5 presentation (using
-slide.js for instance), you want to write a part of the document an
-easier way. &hellip;">
+  <meta name="description" content="The Problem With the asset pipeline included in Rails 3.1, we have a great big javascript file including all at once our code. But what about code &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +18,7 @@ easier way. &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://yarmand.github.com/">
+  <link rel="canonical" href="http://yarmand.github.com/blog/2011/09/05/javascript-initializers-to-your-views-with-rails-3-dot-1-and-coffeescript/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -76,247 +74,12 @@ easier way. &hellip;">
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/02/21/embed-markdown-into-your-html/">Embed Markdown Into Your HTML</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-02-21T01:23:00+01:00" pubdate data-updated="true">Feb 21<span>st</span>, 2012</time>
-        
-         | <a href="/blog/2012/02/21/embed-markdown-into-your-html/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Sometime when you write documentation or HTML5 presentation (using
-slide.js for instance), you want to write a part of the document an
-easier way.</p>
-
-<p>What about embeding directly some markdown code into you HTML and
-convert it on the flight on the browser when displaying ?</p>
-
-<h2>What I&#8217;d like to write</h2>
-
-<p><html></p>
-
-<!-- HTML generated using hilite.me -->
-
-
-<div style="background: #202020; overflow:auto;width:auto;color:white;background:black;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #6ab825; font-weight: bold">&lt;html&gt;</span>
-  <span style="color: #6ab825; font-weight: bold">&lt;body&gt;</span>
-      <span style="color: #6ab825; font-weight: bold">&lt;article&gt;</span>
-         <span style="color: #6ab825; font-weight: bold">&lt;script </span><span style="color: #bbbbbb">type=</span><span style="color: #ed9d13">&quot;text/markdown&quot;</span><span style="color: #6ab825; font-weight: bold">&gt;</span>
-<span style="color: #d0d0d0">The</span> <span style="color: #d0d0d0">nice</span> <span style="color: #d0d0d0">title</span> <span style="color: #d0d0d0">here</span>
-<span style="color: #d0d0d0">=</span>
-<span style="color: #d0d0d0">Lorem</span> <span style="color: #d0d0d0">ipsum</span> <span style="color: #d0d0d0">dolor</span> <span style="color: #d0d0d0">sit</span> <span style="color: #d0d0d0">amet,</span> <span style="color: #d0d0d0">consectetur</span> <span style="color: #d0d0d0">adipiscing</span> <span style="color: #d0d0d0">elit.</span> <span style="color: #d0d0d0">Phasellus</span> <span style="color: #d0d0d0">diam</span> <span style="color: #d0d0d0">sem.</span>
-
-<span style="color: #d0d0d0">then</span> <span style="color: #d0d0d0">a</span> <span style="color: #d0d0d0">little</span> <span style="color: #d0d0d0">list</span>
-<span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0">item</span> <span style="color: #3677a9">1</span>
-<span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0">item2</span>
-        <span style="color: #6ab825; font-weight: bold">&lt;/script&gt;</span>
-      <span style="color: #6ab825; font-weight: bold">&lt;/article&gt;</span>
-  <span style="color: #6ab825; font-weight: bold">&lt;/body&gt;</span>
-<span style="color: #6ab825; font-weight: bold">&lt;/html&gt;</span>
-</pre></td></tr></table></div>
-
-
-<p></html></p>
-
-<h2>The on the flight conversion</h2>
-
-<p><a href="http://www.showdown.im">showdown</a> is the javascript markdown converter I will use.</p>
-
-<p>At the end of my HTML file and before presentation runtime do its
-magick, I do the conversion on all markdown I can find in the file :</p>
-
-<p><html></p>
-
-<!-- HTML generated using hilite.me -->
-
-
-<div style="background: #202020; overflow:auto;width:auto;color:white;background:black;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></td><td><pre style="margin: 0; line-height: 125%">  <span style="color: #6ab825; font-weight: bold">&lt;script </span><span style="color: #bbbbbb">src=</span><span style="color: #ed9d13">&quot;http://www.showdown.im/showdown/example/showdown.js&quot;</span><span style="color: #6ab825; font-weight: bold">&gt;</span> <span style="color: #6ab825; font-weight: bold">&lt;/script&gt;</span>
-  <span style="color: #6ab825; font-weight: bold">&lt;script&gt;</span>
-    <span style="color: #d0d0d0">$(</span><span style="color: #6ab825; font-weight: bold">function</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
-      <span style="color: #999999; font-style: italic">// replace markdown text </span>
-      <span style="color: #d0d0d0">$(</span><span style="color: #ed9d13">&#39;script[type=&quot;text/markdown&quot;]&#39;</span><span style="color: #d0d0d0">).after(</span><span style="color: #6ab825; font-weight: bold">function</span><span style="color: #d0d0d0">(index){</span>
-        <span style="color: #d0d0d0">converter</span> <span style="color: #d0d0d0">=</span> <span style="color: #6ab825; font-weight: bold">new</span> <span style="color: #d0d0d0">Showdown.converter();</span>
-        <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">converter.makeHtml(</span><span style="color: #6ab825; font-weight: bold">this</span><span style="color: #d0d0d0">.textContent);</span>
-      <span style="color: #d0d0d0">});</span>
-    <span style="color: #d0d0d0">});</span>
- <span style="color: #6ab825; font-weight: bold">&lt;/script&gt;</span>
-</pre></td></tr></table></div>
-
-
-<p></html></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/12/07/pour-une-vrai-popularite-representee-par-lindice-tiobe/">Pour Une Vrai Popularité Représentée Par L&#8217;indice TIOBE</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-07T15:17:00+01:00" pubdate data-updated="true">Dec 7<span>th</span>, 2011</time>
-        
-         | <a href="/blog/2011/12/07/pour-une-vrai-popularite-representee-par-lindice-tiobe/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><img src="/images/post_icons/tiobe.png" class="post_icon float_left" alt="Tiobe icon"></p>
-
-<p><a href="http://www.camilleroux.com/">Camile Roux</a> nous indique sur <a href="http://rubylive.fr/items/157-ruby-toujours-11eme-au-classement-tiobe">RubyLive</a> que Ruby conserve sa 11eme place, juste derrière Javascript au classement <a href="www.tiobe.com">TIOBE</a></p>
-
-<p>Le classement TIOBE utilise le mot popularité mais je pense que celui-ci est dévoyé dans ce cas.
-L&#8217;indice TIOBE mesure le nombre d&#8217;ingénieurs disponibles et ce nombre ne représente pas la joie que chacun éprouve dans tel ou tel langage.
-Il reflète simplement la <em>demande du marché</em>.</p>
-
-<p>Je pense que de nombreux programmeurs ont un langage de prédilection pour leur activité professionnel mais cela ne reflète pas forcément leur goût.</p>
-
-<p>Dans mon cas, je suis un gars plutôt pointu en C que je pratique depuis 20 ans, ce langage me fait manger mais je deteste.
-Le dimanche je fait du Ruby pour me reposer le cerveau et j&#8217;essaye de participer à la communauté pour rendre ce langage plus &#8220;business usable&#8221;.</p>
-
-<p>Merci Camille de nous pointer vers cet indice qui nous montre que notre enthousiasme pour les langages moderne n&#8217;est pas refléter par le marché.</p>
-
-<p>Aller les gars !!!
-Il faut pousser encore plus fort et convaincre les donneurs d&#8217;ordre pour que le TIOBE représente enfin la popularité du coeur des programmeurs.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/09/26/subject-following-to-better-filter-social-network-posts/">Subject Following to Better Filter Social Network Posts</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-09-26T14:26:00+02:00" pubdate data-updated="true">Sep 26<span>th</span>, 2011</time>
-        
-         | <a href="/blog/2011/09/26/subject-following-to-better-filter-social-network-posts/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><img src='/images/post_icons/who_follow.png' class='post_icon float_right' alt='who follow'/>
-<a href="http://twitter.com/#!/yarmand">Twitter</a> introduced public posting and <strong>follow</strong> concept from the beginning
-and have been copied by <a href="https://plus.google.com/104135330570501675673">Google+</a> and more recently by <a href="https://www.facebook.com/yann.armand">Facebook</a> with the <a href="https://www.facebook.com/about/subscribe">subscribe button</a>.</p>
-
-<p><strong>But profile follow is a one way selectors. It partially cover the issue because it ignore that a single person produce infos on differentes domains.</strong></p>
-
-<p>As a normal human, I am curious about several subjects and I produce infos about several subjects.</p>
-
-<p>In my case, I produce informations as a software programer and as a dog trainer. These are completely unrelated subjects followed by completely different people I don&#8217;t want to bother with non accurate infos.
-To prevent that, I have to use multiple profiles and split my identity across them. It can become a nightmare or drive me Schizophrenic.</p>
-
-<p><strong>So following an identity is not enough. To be efficient we should follow somebody about subjects.</strong></p>
-
-<blockquote><p>for example I can follow <a href="http://twitter.com/#!/dhh">@DHH</a>on <em>Ruby</em> or <em>programming</em> but not on <em>skate boarding</em>.</p></blockquote>
-
-<p><strong>One social profile/identity</strong> should propose <strong>several subjects</strong> (including a <em>global</em> one).
-I should post to a subject the same way today I post to a <a href="http://www.google.com/support/plus/bin/static.py?hl=en&amp;guide=1257347&amp;page=guide.cs&amp;rd=1">google circle</a>, but as the opposite of google circles, this is not me choosing people receiving infos, <strong>this is people choosing to follow my public subjects</strong>.</p>
-
-<p><strong>This way we get the double filter of choosing the most interesting people only on subject we care about.</strong></p>
-
-<p>The main drawback of this method is to reduce <a href="http://en.wikipedia.org/wiki/Serendipity">Serendipity</a> which is the life of the internet. As a first response, I should say that every infos producer will have the responsibility of posting unrelated infos on subjects at a frequency acceptable to his followers.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/09/05/javascript-initializers-to-your-views-with-rails-3-dot-1-and-coffeescript/">Javascript Initializers to Your Views With Rails 3.1 and CoffeeScript</a></h1>
+      <h1 class="entry-title">Javascript Initializers to Your Views With Rails 3.1 and CoffeeScript</h1>
     
     
       <p class="meta">
@@ -334,14 +97,14 @@ I should post to a subject the same way today I post to a <a href="http://www.go
 
 <time datetime="2011-09-05T08:56:00+02:00" pubdate data-updated="true">Sep 5<span>th</span>, 2011</time>
         
-         | <a href="/blog/2011/09/05/javascript-initializers-to-your-views-with-rails-3-dot-1-and-coffeescript/#disqus_thread">Comments</a>
+         | <a href="#disqus_thread">Comments</a>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><h1>The Problem</h1>
+<div class="entry-content"><h1>The Problem</h1>
 
 <p>With the asset pipeline included in Rails 3.1, we have a great big javascript file including all at once our code.</p>
 
@@ -592,22 +355,16 @@ I should post to a subject the same way today I post to a <a href="http://www.go
 </ul>
 
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/06/20/rework-the-book-from-37-signals-founders/">Rework: The Book From 37 Signals Founders</a></h1>
-    
-    
-      <p class="meta">
-        
+  
+
+<span class="byline author vcard">Posted by <span class="fn">yann Armand</span></span>
+
+      
 
 
 
@@ -619,47 +376,52 @@ I should post to a subject the same way today I post to a <a href="http://www.go
   
 
 
-<time datetime="2011-06-20T09:23:00+02:00" pubdate data-updated="true">Jun 20<span>th</span>, 2011</time>
-        
-         | <a href="/blog/2011/06/20/rework-the-book-from-37-signals-founders/#disqus_thread">Comments</a>
-        
-      </p>
+<time datetime="2011-09-05T08:56:00+02:00" pubdate data-updated="true">Sep 5<span>th</span>, 2011</time>
+      
+
+
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p><img src='/images/post_icons/art-planningisguessing.png' class='post_icon float_left' alt='rework'></p>
-
-<p><a href="http://37signals.com/rework/">a Great book</a></p>
-
-<p>Youngest, forget what you have been teached.</p>
-
-<p>Elders, you’ll found in it the words to put on the feelings you got.</p>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yarmand.github.com/blog/2011/09/05/javascript-initializers-to-your-views-with-rails-3-dot-1-and-coffeescript/" data-via="" data-counturl="http://yarmand.github.com/blog/2011/09/05/javascript-initializers-to-your-views-with-rails-3-dot-1-and-coffeescript/" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/06/20/rework-the-book-from-37-signals-founders/" title="Previous Post: Rework: the book from 37 signals founders">&laquo; Rework: the book from 37 signals founders</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2011/09/26/subject-following-to-better-filter-social-network-posts/" title="Next Post: Subject Following to better filter social network posts">Subject Following to better filter social network posts &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
+  </section>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
 <h1>About Me</h1>
   <img src='http://www.gravatar.com/avatar/e77e4b46a99c10734e9078a1fb487a7d.png' style='float: left;' />
   <p>
-    Hi I&#8217;m Yann ARMAND.
+    Hi I'm Yann ARMAND.
   </p><p>
-  I&#8217;m a senior sotware engineer at <a
+  I'm a senior sotware engineer at <a
     href='http://www.yammer.com'>Yammer</a> and keep my mind fresh and fast with side projects.
   </p><p>
-    Talk me about code, just code&#8230;. or food.
+    Talk me about code, just code.... or food.
   <p/><p>
     Meet me at #ruby meetups in #London
   </p>
@@ -687,7 +449,7 @@ I should post to a subject the same way today I post to a <a href="http://www.go
       </li>
     
       <li class="post">
-        <a href="/blog/2011/12/07/pour-une-vrai-popularite-representee-par-lindice-tiobe/">Pour une vrai popularité représentée par l&#8217;indice TIOBE</a>
+        <a href="/blog/2011/12/07/pour-une-vrai-popularite-representee-par-lindice-tiobe/">Pour une vrai popularité représentée par l'indice TIOBE</a>
       </li>
     
       <li class="post">
@@ -713,6 +475,7 @@ I should post to a subject the same way today I post to a <a href="http://www.go
   
 </aside>
 
+
     </div>
   </div>
   <footer role="contentinfo"><p>
@@ -727,7 +490,10 @@ I should post to a subject the same way today I post to a <a href="http://www.go
       var disqus_shortname = 'harakys-octopress';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://yarmand.github.com/blog/2011/09/05/javascript-initializers-to-your-views-with-rails-3-dot-1-and-coffeescript/';
+        var disqus_url = 'http://yarmand.github.com/blog/2011/09/05/javascript-initializers-to-your-views-with-rails-3-dot-1-and-coffeescript/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

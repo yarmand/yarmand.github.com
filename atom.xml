@@ -1,115 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>\_@yarmand coding tales_/</title>
-  <meta name="author" content="yann Armand">
-
-  
-  <meta name="description" content="Sometime when you write documentation or HTML5 presentation (using
-slide.js for instance), you want to write a part of the document an
-easier way. &hellip;">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://yarmand.github.com/">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="\_@yarmand coding tales_/" type="application/atom+xml">
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-  
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-25674684-2']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-
-
-</head>
-
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">\_@yarmand coding tales_/</a></h1>
-  
-    <h2>Old school programmer adventures in a world of stratuper.</h2>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:yarmand.github.com" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
+  <title><![CDATA[\_@yarmand coding tales_/]]></title>
+  <link href="http://yarmand.github.com/atom.xml" rel="self"/>
+  <link href="http://yarmand.github.com/"/>
+  <updated>2013-02-10T00:46:12+01:00</updated>
+  <id>http://yarmand.github.com/</id>
+  <author>
+    <name><![CDATA[yann Armand]]></name>
     
-      <h1 class="entry-title"><a href="/blog/2012/02/21/embed-markdown-into-your-html/">Embed Markdown Into Your HTML</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
   
-
-
-<time datetime="2012-02-21T01:23:00+01:00" pubdate data-updated="true">Feb 21<span>st</span>, 2012</time>
-        
-         | <a href="/blog/2012/02/21/embed-markdown-into-your-html/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Sometime when you write documentation or HTML5 presentation (using
+  <entry>
+    <title type="html"><![CDATA[Embed markdown into your HTML]]></title>
+    <link href="http://yarmand.github.com/blog/2012/02/21/embed-markdown-into-your-html/"/>
+    <updated>2012-02-21T01:23:00+01:00</updated>
+    <id>http://yarmand.github.com/blog/2012/02/21/embed-markdown-into-your-html</id>
+    <content type="html"><![CDATA[<p>Sometime when you write documentation or HTML5 presentation (using
 slide.js for instance), you want to write a part of the document an
 easier way.</p>
 
@@ -192,44 +101,15 @@ magick, I do the conversion on all markdown I can find in the file :</p>
 
 
 <p></html></p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/12/07/pour-une-vrai-popularite-representee-par-lindice-tiobe/">Pour Une Vrai Popularité Représentée Par L&#8217;indice TIOBE</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-07T15:17:00+01:00" pubdate data-updated="true">Dec 7<span>th</span>, 2011</time>
-        
-         | <a href="/blog/2011/12/07/pour-une-vrai-popularite-representee-par-lindice-tiobe/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><img src="/images/post_icons/tiobe.png" class="post_icon float_left" alt="Tiobe icon"></p>
+  <entry>
+    <title type="html"><![CDATA[Pour une vrai popularité représentée par l'indice TIOBE]]></title>
+    <link href="http://yarmand.github.com/blog/2011/12/07/pour-une-vrai-popularite-representee-par-lindice-tiobe/"/>
+    <updated>2011-12-07T15:17:00+01:00</updated>
+    <id>http://yarmand.github.com/blog/2011/12/07/pour-une-vrai-popularite-representee-par-lindice-tiobe</id>
+    <content type="html"><![CDATA[<p><img src="http://yarmand.github.com/images/post_icons/tiobe.png" class="post_icon float_left" alt="Tiobe icon"></p>
 
 <p><a href="http://www.camilleroux.com/">Camile Roux</a> nous indique sur <a href="http://rubylive.fr/items/157-ruby-toujours-11eme-au-classement-tiobe">RubyLive</a> que Ruby conserve sa 11eme place, juste derrière Javascript au classement <a href="www.tiobe.com">TIOBE</a></p>
 
@@ -246,44 +126,15 @@ Le dimanche je fait du Ruby pour me reposer le cerveau et j&#8217;essaye de part
 
 <p>Aller les gars !!!
 Il faut pousser encore plus fort et convaincre les donneurs d&#8217;ordre pour que le TIOBE représente enfin la popularité du coeur des programmeurs.</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/09/26/subject-following-to-better-filter-social-network-posts/">Subject Following to Better Filter Social Network Posts</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-09-26T14:26:00+02:00" pubdate data-updated="true">Sep 26<span>th</span>, 2011</time>
-        
-         | <a href="/blog/2011/09/26/subject-following-to-better-filter-social-network-posts/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><img src='/images/post_icons/who_follow.png' class='post_icon float_right' alt='who follow'/>
+  <entry>
+    <title type="html"><![CDATA[Subject Following to better filter social network posts]]></title>
+    <link href="http://yarmand.github.com/blog/2011/09/26/subject-following-to-better-filter-social-network-posts/"/>
+    <updated>2011-09-26T14:26:00+02:00</updated>
+    <id>http://yarmand.github.com/blog/2011/09/26/subject-following-to-better-filter-social-network-posts</id>
+    <content type="html"><![CDATA[<p><img src='http://yarmand.github.com/images/post_icons/who_follow.png' class='post_icon float_right' alt='who follow'/>
 <a href="http://twitter.com/#!/yarmand">Twitter</a> introduced public posting and <strong>follow</strong> concept from the beginning
 and have been copied by <a href="https://plus.google.com/104135330570501675673">Google+</a> and more recently by <a href="https://www.facebook.com/yann.armand">Facebook</a> with the <a href="https://www.facebook.com/about/subscribe">subscribe button</a>.</p>
 
@@ -304,44 +155,15 @@ I should post to a subject the same way today I post to a <a href="http://www.go
 <p><strong>This way we get the double filter of choosing the most interesting people only on subject we care about.</strong></p>
 
 <p>The main drawback of this method is to reduce <a href="http://en.wikipedia.org/wiki/Serendipity">Serendipity</a> which is the life of the internet. As a first response, I should say that every infos producer will have the responsibility of posting unrelated infos on subjects at a frequency acceptable to his followers.</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/09/05/javascript-initializers-to-your-views-with-rails-3-dot-1-and-coffeescript/">Javascript Initializers to Your Views With Rails 3.1 and CoffeeScript</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-09-05T08:56:00+02:00" pubdate data-updated="true">Sep 5<span>th</span>, 2011</time>
-        
-         | <a href="/blog/2011/09/05/javascript-initializers-to-your-views-with-rails-3-dot-1-and-coffeescript/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h1>The Problem</h1>
+  <entry>
+    <title type="html"><![CDATA[Javascript initializers to your views with Rails 3.1 and CoffeeScript]]></title>
+    <link href="http://yarmand.github.com/blog/2011/09/05/javascript-initializers-to-your-views-with-rails-3-dot-1-and-coffeescript/"/>
+    <updated>2011-09-05T08:56:00+02:00</updated>
+    <id>http://yarmand.github.com/blog/2011/09/05/javascript-initializers-to-your-views-with-rails-3-dot-1-and-coffeescript</id>
+    <content type="html"><![CDATA[<h1>The Problem</h1>
 
 <p>With the asset pipeline included in Rails 3.1, we have a great big javascript file including all at once our code.</p>
 
@@ -591,170 +413,22 @@ I should post to a subject the same way today I post to a <a href="http://www.go
 <li><a href="https://github.com/sstephenson/sprockets">sprockets (the engine under asset pipeline)</a></li>
 </ul>
 
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/06/20/rework-the-book-from-37-signals-founders/">Rework: The Book From 37 Signals Founders</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-20T09:23:00+02:00" pubdate data-updated="true">Jun 20<span>th</span>, 2011</time>
-        
-         | <a href="/blog/2011/06/20/rework-the-book-from-37-signals-founders/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><img src='/images/post_icons/art-planningisguessing.png' class='post_icon float_left' alt='rework'></p>
+  <entry>
+    <title type="html"><![CDATA[Rework: the book from 37 signals founders]]></title>
+    <link href="http://yarmand.github.com/blog/2011/06/20/rework-the-book-from-37-signals-founders/"/>
+    <updated>2011-06-20T09:23:00+02:00</updated>
+    <id>http://yarmand.github.com/blog/2011/06/20/rework-the-book-from-37-signals-founders</id>
+    <content type="html"><![CDATA[<p><img src='http://yarmand.github.com/images/post_icons/art-planningisguessing.png' class='post_icon float_left' alt='rework'></p>
 
 <p><a href="http://37signals.com/rework/">a Great book</a></p>
 
 <p>Youngest, forget what you have been teached.</p>
 
 <p>Elders, you’ll found in it the words to put on the feelings you got.</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-<h1>About Me</h1>
-  <img src='http://www.gravatar.com/avatar/e77e4b46a99c10734e9078a1fb487a7d.png' style='float: left;' />
-  <p>
-    Hi I&#8217;m Yann ARMAND.
-  </p><p>
-  I&#8217;m a senior sotware engineer at <a
-    href='http://www.yammer.com'>Yammer</a> and keep my mind fresh and fast with side projects.
-  </p><p>
-    Talk me about code, just code&#8230;. or food.
-  <p/><p>
-    Meet me at #ruby meetups in #London
-  </p>
-  <p>
-    <a href='https://twitter.com/#!/yarmand'><img src='/images/Twitter.png' style='border: 0;'></a>
-    <a href='https://www.facebook.com/yann.armand'><img src='/images/Facebook.png' style='border: 0;'></a>
-    <a href='https://github.com/yarmand'><img src='/images/Github.png' style='border: 0;'></a>
-  </p><p>
-  <h2> My last talks @rubybdx (french)</h2>
-   <ul>
-     <li class="post"><a href='http://rubybdx.org/presentations/#2012_04_03_yann'>Programmer un wiki en 20 minutes avec Sinatra</a></li>
-     <li class="post"><a href='http://rubybdx.org/presentations/#2011_12_06_yann'>Ruby 1.9 - Quelques nouveautés 1/2</a></li>
-     <li class="post"><a href='http://rubybdx.org/presentations/#2012_01_10_yann'>Ruby 1.9 - Quelques nouveautés 2/2</a></li>
-     <li class="post"><a href='http://rubybdx.org/presentations/#2011_11_08_yann'>Isolation et déclenchement automatique de code JS en Rails 3.1</a></li>
-    </ul>
-  </p>
-
-</section>
-<section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2012/02/21/embed-markdown-into-your-html/">Embed markdown into your HTML</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/12/07/pour-une-vrai-popularite-representee-par-lindice-tiobe/">Pour une vrai popularité représentée par l&#8217;indice TIOBE</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/09/26/subject-following-to-better-filter-social-network-posts/">Subject Following to better filter social network posts</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/09/05/javascript-initializers-to-your-views-with-rails-3-dot-1-and-coffeescript/">Javascript initializers to your views with Rails 3.1 and CoffeeScript</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/06/20/rework-the-book-from-37-signals-founders/">Rework: the book from 37 signals founders</a>
-      </li>
-    
-  </ul>
-</section>
-
-
-
-
-
-
-  
-</aside>
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - yann Armand -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
-  
-
-<script type="text/javascript">
-      var disqus_shortname = 'harakys-octopress';
-      
-        
-        var disqus_script = 'count.js';
-      
-    (function () {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
-
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-
-</body>
-</html>
+</feed>

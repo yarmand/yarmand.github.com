@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Embed markdown into your HTML - \_@yarmand coding tales_/</title>
+  <meta name="author" content="yann Armand">
+
+  
+  <meta name="description" content="Sometime when you write documentation or HTML5 presentation (using
+slide.js for instance), you want to write a part of the document an
+easier way. &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://yarmand.github.com/blog/2012/02/21/embed-markdown-into-your-html/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="\_@yarmand coding tales_/" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-25674684-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">\_@yarmand coding tales_/</a></h1>
+  
+    <h2>Old school programmer adventures in a world of stratuper.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:yarmand.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Embed Markdown Into Your HTML</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-21T01:23:00+01:00" pubdate data-updated="true">Feb 21<span>st</span>, 2012</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Sometime when you write documentation or HTML5 presentation (using
+slide.js for instance), you want to write a part of the document an
+easier way.</p>
+
+<p>What about embeding directly some markdown code into you HTML and
+convert it on the flight on the browser when displaying ?</p>
+
+<h2>What I&#8217;d like to write</h2>
+
+<p><html></p>
+
+<!-- HTML generated using hilite.me -->
+
+
+<div style="background: #202020; overflow:auto;width:auto;color:white;background:black;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #6ab825; font-weight: bold">&lt;html&gt;</span>
+  <span style="color: #6ab825; font-weight: bold">&lt;body&gt;</span>
+      <span style="color: #6ab825; font-weight: bold">&lt;article&gt;</span>
+         <span style="color: #6ab825; font-weight: bold">&lt;script </span><span style="color: #bbbbbb">type=</span><span style="color: #ed9d13">&quot;text/markdown&quot;</span><span style="color: #6ab825; font-weight: bold">&gt;</span>
+<span style="color: #d0d0d0">The</span> <span style="color: #d0d0d0">nice</span> <span style="color: #d0d0d0">title</span> <span style="color: #d0d0d0">here</span>
+<span style="color: #d0d0d0">=</span>
+<span style="color: #d0d0d0">Lorem</span> <span style="color: #d0d0d0">ipsum</span> <span style="color: #d0d0d0">dolor</span> <span style="color: #d0d0d0">sit</span> <span style="color: #d0d0d0">amet,</span> <span style="color: #d0d0d0">consectetur</span> <span style="color: #d0d0d0">adipiscing</span> <span style="color: #d0d0d0">elit.</span> <span style="color: #d0d0d0">Phasellus</span> <span style="color: #d0d0d0">diam</span> <span style="color: #d0d0d0">sem.</span>
+
+<span style="color: #d0d0d0">then</span> <span style="color: #d0d0d0">a</span> <span style="color: #d0d0d0">little</span> <span style="color: #d0d0d0">list</span>
+<span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0">item</span> <span style="color: #3677a9">1</span>
+<span style="color: #d0d0d0">.</span> <span style="color: #d0d0d0">item2</span>
+        <span style="color: #6ab825; font-weight: bold">&lt;/script&gt;</span>
+      <span style="color: #6ab825; font-weight: bold">&lt;/article&gt;</span>
+  <span style="color: #6ab825; font-weight: bold">&lt;/body&gt;</span>
+<span style="color: #6ab825; font-weight: bold">&lt;/html&gt;</span>
+</pre></td></tr></table></div>
+
+
+<p></html></p>
+
+<h2>The on the flight conversion</h2>
+
+<p><a href="http://www.showdown.im">showdown</a> is the javascript markdown converter I will use.</p>
+
+<p>At the end of my HTML file and before presentation runtime do its
+magick, I do the conversion on all markdown I can find in the file :</p>
+
+<p><html></p>
+
+<!-- HTML generated using hilite.me -->
+
+
+<div style="background: #202020; overflow:auto;width:auto;color:white;background:black;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></td><td><pre style="margin: 0; line-height: 125%">  <span style="color: #6ab825; font-weight: bold">&lt;script </span><span style="color: #bbbbbb">src=</span><span style="color: #ed9d13">&quot;http://www.showdown.im/showdown/example/showdown.js&quot;</span><span style="color: #6ab825; font-weight: bold">&gt;</span> <span style="color: #6ab825; font-weight: bold">&lt;/script&gt;</span>
+  <span style="color: #6ab825; font-weight: bold">&lt;script&gt;</span>
+    <span style="color: #d0d0d0">$(</span><span style="color: #6ab825; font-weight: bold">function</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
+      <span style="color: #999999; font-style: italic">// replace markdown text </span>
+      <span style="color: #d0d0d0">$(</span><span style="color: #ed9d13">&#39;script[type=&quot;text/markdown&quot;]&#39;</span><span style="color: #d0d0d0">).after(</span><span style="color: #6ab825; font-weight: bold">function</span><span style="color: #d0d0d0">(index){</span>
+        <span style="color: #d0d0d0">converter</span> <span style="color: #d0d0d0">=</span> <span style="color: #6ab825; font-weight: bold">new</span> <span style="color: #d0d0d0">Showdown.converter();</span>
+        <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">converter.makeHtml(</span><span style="color: #6ab825; font-weight: bold">this</span><span style="color: #d0d0d0">.textContent);</span>
+      <span style="color: #d0d0d0">});</span>
+    <span style="color: #d0d0d0">});</span>
+ <span style="color: #6ab825; font-weight: bold">&lt;/script&gt;</span>
+</pre></td></tr></table></div>
+
+
+<p></html></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">yann Armand</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-21T01:23:00+01:00" pubdate data-updated="true">Feb 21<span>st</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yarmand.github.com/blog/2012/02/21/embed-markdown-into-your-html/" data-via="" data-counturl="http://yarmand.github.com/blog/2012/02/21/embed-markdown-into-your-html/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/12/07/pour-une-vrai-popularite-representee-par-lindice-tiobe/" title="Previous Post: Pour une vrai popularité représentée par l'indice TIOBE">&laquo; Pour une vrai popularité représentée par l'indice TIOBE</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+<h1>About Me</h1>
+  <img src='http://www.gravatar.com/avatar/e77e4b46a99c10734e9078a1fb487a7d.png' style='float: left;' />
+  <p>
+    Hi I'm Yann ARMAND.
+  </p><p>
+  I'm a senior sotware engineer at <a
+    href='http://www.yammer.com'>Yammer</a> and keep my mind fresh and fast with side projects.
+  </p><p>
+    Talk me about code, just code.... or food.
+  <p/><p>
+    Meet me at #ruby meetups in #London
+  </p>
+  <p>
+    <a href='https://twitter.com/#!/yarmand'><img src='/images/Twitter.png' style='border: 0;'></a>
+    <a href='https://www.facebook.com/yann.armand'><img src='/images/Facebook.png' style='border: 0;'></a>
+    <a href='https://github.com/yarmand'><img src='/images/Github.png' style='border: 0;'></a>
+  </p><p>
+  <h2> My last talks @rubybdx (french)</h2>
+   <ul>
+     <li class="post"><a href='http://rubybdx.org/presentations/#2012_04_03_yann'>Programmer un wiki en 20 minutes avec Sinatra</a></li>
+     <li class="post"><a href='http://rubybdx.org/presentations/#2011_12_06_yann'>Ruby 1.9 - Quelques nouveautés 1/2</a></li>
+     <li class="post"><a href='http://rubybdx.org/presentations/#2012_01_10_yann'>Ruby 1.9 - Quelques nouveautés 2/2</a></li>
+     <li class="post"><a href='http://rubybdx.org/presentations/#2011_11_08_yann'>Isolation et déclenchement automatique de code JS en Rails 3.1</a></li>
+    </ul>
+  </p>
+
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/02/21/embed-markdown-into-your-html/">Embed markdown into your HTML</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/12/07/pour-une-vrai-popularite-representee-par-lindice-tiobe/">Pour une vrai popularité représentée par l'indice TIOBE</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/09/26/subject-following-to-better-filter-social-network-posts/">Subject Following to better filter social network posts</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/09/05/javascript-initializers-to-your-views-with-rails-3-dot-1-and-coffeescript/">Javascript initializers to your views with Rails 3.1 and CoffeeScript</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/06/20/rework-the-book-from-37-signals-founders/">Rework: the book from 37 signals founders</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - yann Armand -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'harakys-octopress';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://yarmand.github.com/blog/2012/02/21/embed-markdown-into-your-html/';
+        var disqus_url = 'http://yarmand.github.com/blog/2012/02/21/embed-markdown-into-your-html/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
